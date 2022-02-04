@@ -18,10 +18,10 @@ class Point {
 
     }
 
-    distanceFromOrigin() {
+    distanceFromOriginP() {
         const originPoint = new Point(0, 0)
-        const distanceOP = MathC.calculateDistance(originPoint, this)
-        return "The distance to the origin point is: " + distanceOP
+        const distanceOP = this.distanceFrom(originPoint) //MathC.calculateDistance(originPoint, this) 
+        return distanceOP
     }
 
     medianPointFromPoint(point) {
@@ -31,6 +31,6 @@ class Point {
     }
 
     nearestPoint(...points) {
-        return points.reduce((p, c) => MathC.calculateDistance(this, p) < MathC.calculateDistance(this, c) ? p : c)
+        return points.reduce((p, c) => this.distanceFrom(p) < this.distanceFrom(c) ? p : c) //MathC.calculateDistance(this, p) < MathC.calculateDistance(this, c) ? p : c)
     }
 }

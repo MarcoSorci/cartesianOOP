@@ -1,5 +1,5 @@
 class MathC {
-    static calculateDistance(a, b) {
+    static calculateDistance(a, b) { //static is for using the method even without new Point
         const xDif = b.x - a.x
         const xDif2 = xDif * xDif
 
@@ -17,6 +17,8 @@ class MathC {
     static medianPoint(a, b) {
         const xofM = (a.x + b.x) / 2 // (3 + 6) /2 = 4.5
         const yofM = (a.y + b.y) / 2 // (5 + 1) /2 = 3
+        //const median = new Point(xofM, yofM)
+        //return median
         return "the coords of the median point are X: " + xofM + " Y: " + yofM;
     }
 

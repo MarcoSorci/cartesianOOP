@@ -23,11 +23,11 @@ console.log(nearest);
 
 
 const distancefromB = pointA.distanceFrom(pointB)
-const distancefromOrigin = pointA.distanceFromOrigin()
+const distancefromOriginc = pointA.distanceFromOriginP()
 const medianFromB = pointA.medianPointFromPoint(pointB)
 const nearestToA = pointA.nearestPoint(pointB, pointC, pointD, pointE)
 
 console.log(distancefromB);
-console.log(distancefromOrigin);
+console.log(distancefromOriginc);
 console.log(medianFromB);
 console.log(nearestToA);
