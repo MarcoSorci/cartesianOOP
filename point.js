@@ -14,7 +14,7 @@ class Point {
         const sumDifPoint2 = xDifPoint2 + yDifPoint2
         const sqrtSumDifPoint2 = Math.sqrt(sumDifPoint2)
 
-        return "The distance to the given point is: " + sqrtSumDifPoint2
+        return sqrtSumDifPoint2
 
     }
 
@@ -33,4 +33,22 @@ class Point {
     nearestPoint(...points) {
         return points.reduce((p, c) => this.distanceFrom(p) < this.distanceFrom(c) ? p : c) //MathC.calculateDistance(this, p) < MathC.calculateDistance(this, c) ? p : c)
     }
+
+    calculatePerimeter(...points) {
+        return points.reduce((p, c) => ((this.distanceFrom(p) + this.distanceFrom(c)) * 2)) //not taking enough nums
+    }
+
+    calculateArea(...points) {
+        return points.reduce((p, c) => this.distanceFrom(p) * this.distanceFrom(c))
+    }
+
+    medianPointFromSegment(segment){
+        
+    }
+
+
+
+    // calculateArea(p2, p4) {
+    //     return this.distanceFrom(p2) * this.distanceFrom(p4)
+    // }
 }

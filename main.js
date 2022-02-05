@@ -18,16 +18,30 @@ console.log(median);
 console.log(distanceO);
 console.log(nearest);
 
+console.log(pointA.distanceFrom(pointB));  //distancefromB
+console.log(pointA.distanceFromOriginP());  //distancefromOriginc
+console.log(pointA.medianPointFromPoint(pointB));  //medianFromB
+console.log(pointA.nearestPoint(pointB, pointC, pointD, pointE, pointF));  //nearestToA
+
+const segment = pointA.distanceFrom(pointB);
 
 
 
 
-const distancefromB = pointA.distanceFrom(pointB)
-const distancefromOriginc = pointA.distanceFromOriginP()
-const medianFromB = pointA.medianPointFromPoint(pointB)
-const nearestToA = pointA.nearestPoint(pointB, pointC, pointD, pointE)
+const pointsqA = new Point(1, 1);
+const pointsqB = new Point(1, 3);
+const pointsqC = new Point(6, 1);
+const pointsqD = new Point(6, 3);
 
-console.log(distancefromB);
-console.log(distancefromOriginc);
-console.log(medianFromB);
-console.log(nearestToA);
+console.log(pointsqA.distanceFrom(pointsqB));
+console.log(pointsqA.distanceFrom(pointsqC));
+
+console.log(pointsqA.calculatePerimeter(pointsqB, pointsqC));  //isn't accepting more than 3 points for some reason
+
+console.log(pointsqA.calculateArea(pointsqB, pointsqC));
+console.log(pointsqD.calculateArea(pointsqB, pointsqC));
+console.log(pointsqB.calculateArea(pointsqA, pointsqD));
+
+
+
+
