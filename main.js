@@ -65,5 +65,11 @@ console.log(rect3.pointBottomLeft());
 console.log(rect3.perimeter());
 console.log(rect3.area());
 
+const mappa = new Map();  //key-value, with this key can be anything not just a string
+
+// mappa.set(1, "poo")
+// mappa.set(2, "pee")
+// console.log(mappa);
+
 
 

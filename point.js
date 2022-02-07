@@ -153,6 +153,8 @@ class Rectangle3 {
     constructor(topLeft, bottomRight) {
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
+        // this.topRight = new Point(bottomRight.x, topLeft.y);   //better, can't put function here unless it's static, cuz it doesn't need an object, called with the class name
+        // this.bottomLeft = new Point(topLeft.x, bottomRight.y);
     }
 
     pointTopRight() {
@@ -167,8 +169,8 @@ class Rectangle3 {
         let yOfPointBL = this.bottomRight.y
         const bl = new Point(xOfPointBL, yOfPointBL);
         return bl;
-
     }
+
     perimeter() {
         return (this.topLeft.distanceFrom(this.pointTopRight()) +
             this.pointTopRight().distanceFrom(this.bottomRight) +
