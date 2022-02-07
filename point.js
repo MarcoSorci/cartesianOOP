@@ -59,12 +59,12 @@ class Segment {
         this.point2 = point2
     }
 
-    length(segment) {
-        return
+    length() {
+        return this.point1.distanceFrom(this.point2);
     }
 
-    median(segment) {
-        return
+    median() {
+        return this.point1.medianPointFromPoint(this.point2);
     }
 }
 
@@ -180,5 +180,57 @@ class Rectangle3 {
 
     area() {
         return this.pointBottomLeft().distanceFrom(this.bottomRight) * this.pointBottomLeft().distanceFrom(this.topLeft)
+    }
+}
+
+class Vec {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // plus(vectorX, vectorY){
+    //    const newvecX = this.x + vectorX
+    //    const newvecY = this.y + vectorY
+    //    const newvector = new Vec(newvecX, newvecY);
+    //    return newvector
+    // }
+
+    // minus(vectorX, vectorY){
+    //     const newvecX = this.x - vectorX
+    //     const newvecY = this.y - vectorY
+    //     const newvector = new Vec(newvecX, newvecY);
+    //     return newvector
+    // }
+
+    plus(vectortoedit){
+        return new Vec(this.x + vectortoedit.x, this.y + vectortoedit.y);
+    }
+
+    minus(vectortoedit){
+        return new Vec(this.x - vectortoedit.x, this.y - vectortoedit.y);
+    }
+
+    get length(){  
+        return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
+    }
+}
+
+class Group{
+
+    constructor(){
+        this.grouparray = []
+    }
+
+    add(value){
+        
+    }
+
+    delete(value){
+
+    }
+
+    has(value){
+
     }
 }
