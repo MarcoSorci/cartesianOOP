@@ -75,16 +75,49 @@ console.log(new Vec(1, 2).plus(new Vec(2, 3)));
 console.log(new Vec(1, 2).minus(new Vec(2, 3)));
 console.log(new Vec(3, 4).length); //with getter no need to add () after function, cuz it's NOT a func
 
+const quad1 = new Square(pointsqB, 6);
+const quad2 = new Quad(pointsqB, 6);
 
-let group = Group.from([10, 20]);
-console.log(group.has(10));
-// → true
-console.log(group.has(30));
-// → false
-group.add(10);
-group.delete(10);
-console.log(group.has(10));
-// → false
+console.log("con classe", quad1)
+console.log("con prototipo", quad2);
 
+const trin1 = new Triangle(pointsqB, pointsqA, pointsqC);
+const trin2 = new Triang(pointsqB, pointsqA, pointsqC);
+console.log("con classe", trin1)
+console.log("con prototipo", trin2);
+
+
+const recttring1 = new RightTriangle(pointsqB, pointsqA, pointsqC);
+const recttring2 = new RightTriang(pointsqB, pointsqA, pointsqC);
+console.log("con classe", recttring1)
+console.log("con prototipo", recttring2);
+console.log(trin1.perimeter());
+console.log(recttring1.perimeter());
+console.log(trin2.perimeter());
+console.log(recttring2.perimeter());
+console.log(trin1.area());
+console.log(trin2.area());
+
+// let group = Group.from([10, 20]);
+// console.log(group.has(10));
+// // → true
+// console.log(group.has(30));
+// // → false
+// group.add(10);
+// group.delete(10);
+// console.log(group.has(10));
+// // → false
+
+//console.log(recttring1.calculatehHp()); //huh not workin
+console.log(recttring2.calculatehHp());
+
+// for (let i = 0; i < 100; i++) {
+//     console.log(i);                   //no need for an array
+// }
+
+const range = new Range(0,20,2)
+for (const number of range) {
+    console.log(number);
+}
 
 
